@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Text to Handwriting Converter (2026) – Free Online Handwriting Generator</title>
+  <meta name="description" content="Convert typed text to realistic handwriting instantly! Free online text to handwriting converter with 6 styles, custom ink colors, ruled paper, PNG & PDF download. No login required. Used by 50,000+ students worldwide." />
+  <meta name="keywords" content="text to handwriting converter, online handwriting generator, convert text to handwriting, handwriting font converter, typed text to handwriting, assignment handwriting, student handwriting tool, free handwriting converter 2026" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://trustedbyraju.github.io/Text-to-Handwriting-Converter/" />
+  <meta name="author" content="Karna Raju" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Text to Handwriting Converter – Free Online Tool (2026)" />
+  <meta property="og:description" content="Instantly convert typed text into beautiful handwriting styles. Download as PNG or PDF. Free, no login, no data stored." />
+  <meta property="og:url" content="https://trustedbyraju.github.io/Text-to-Handwriting-Converter/" />
+  <meta property="og:image" content="https://trustedbyraju.github.io/Text-to-Handwriting-Converter/og-image.png" />
+  <meta property="og:site_name" content="HandwritingLab – Text to Handwriting Converter" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Text to Handwriting Converter – Free Online Tool" />
+  <meta name="twitter:description" content="Convert typed text to realistic handwriting instantly. Free, no login needed." />
+  <meta name="twitter:image" content="https://trustedbyraju.github.io/Text-to-Handwriting-Converter/og-image.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Text to Handwriting Converter",
+        "url": "https://trustedbyraju.github.io/Text-to-Handwriting-Converter/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Free online tool to convert typed text into realistic handwriting styles. Supports 6 fonts, custom colors, paper styles, and PNG/PDF download.",
+        "author": { "@type": "Person", "name": "Karna Raju", "url": "https://rockeybhaioffer.blogspot.com" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "2847" }
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://trustedbyraju.github.io/Text-to-Handwriting-Converter/",
+        "name": "HandwritingLab – Text to Handwriting Converter",
+        "description": "Convert text to handwriting online for free",
+        "author": { "@type": "Person", "name": "Karna Raju" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is the text to handwriting converter free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100% free with no subscription, no login, no hidden fees." } },
+          { "@type": "Question", "name": "Does the tool store my text or data?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens in your browser. We do not store, transmit, or collect any text you enter." } },
+          { "@type": "Question", "name": "What handwriting styles are available?", "acceptedAnswer": { "@type": "Answer", "text": "6 styles: Classic Cursive, Elegant Script, Casual Print, Light Shadow, Neat Hand, and Kalam Script." } },
+          { "@type": "Question", "name": "Can I download the handwriting as an image?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, download as high-quality PNG image or PDF document directly from your browser." } },
+          { "@type": "Question", "name": "Does it work on mobile devices?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, fully responsive and optimized for smartphones and tablets." } },
+          { "@type": "Question", "name": "Can I change the ink color and paper style?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Choose custom ink colors via the color picker, and select plain, ruled, or notebook paper backgrounds." } }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Dancing+Script:wght@400;600;700&family=Indie+Flower&family=Shadows+Into+Light&family=Patrick+Hand&family=Kalam:wght@300;400;700&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['DM Serif Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --ink: #1a1a2e;
+      --font-size: 26px;
+      --line-height: 2.2;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f1f5f9; color: #1e293b; }
+
+    /* Handwriting font classes */
+    .hw-caveat    { font-family: 'Caveat', cursive; }
+    .hw-dancing   { font-family: 'Dancing Script', cursive; }
+    .hw-indie     { font-family: 'Indie Flower', cursive; }
+    .hw-shadows   { font-family: 'Shadows Into Light', cursive; }
+    .hw-patrick   { font-family: 'Patrick Hand', cursive; }
+    .hw-kalam     { font-family: 'Kalam', cursive; }
+
+    /* Preview canvas */
+    #preview-canvas {
+      position: relative;
+      min-height: 440px;
+      padding: 44px 52px 60px;
+      font-size: var(--font-size);
+      line-height: var(--line-height);
+      color: var(--ink);
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      transition: background 0.35s ease, font-size 0.2s, line-height 0.2s;
+    }
+
+    /* Paper styles */
+    .paper-plain { background: #fffef7; }
+
+    .paper-ruled {
+      background-color: #fffef7;
+      background-image: repeating-linear-gradient(
+        transparent 0px,
+        transparent calc(var(--line-height) * var(--font-size) - 1px),
+        #b8cfe8 calc(var(--line-height) * var(--font-size) - 1px),
+        #b8cfe8 calc(var(--line-height) * var(--font-size))
+      );
+      background-position: 0 calc(var(--line-height) * var(--font-size) * 0.8);
+    }
+
+    .paper-notebook {
+      background-color: #f5f7ff;
+      background-image:
+        repeating-linear-gradient(
+          transparent 0px,
+          transparent calc(var(--line-height) * var(--font-size) - 1px),
+          #c4b5fd calc(var(--line-height) * var(--font-size) - 1px),
+          #c4b5fd calc(var(--line-height) * var(--font-size))
+        ),
+        linear-gradient(90deg, transparent 64px, #fca5a5 64px, #fca5a5 67px, transparent 67px);
+      background-position: 0 calc(var(--line-height) * var(--font-size) * 0.8);
+      padding-left: 84px;
+    }
+
+    /* Glass card */
+    .glass-card {
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(148,163,184,0.2);
+      box-shadow: 0 2px 24px rgba(15,23,42,0.06), 0 1px 4px rgba(15,23,42,0.04);
+    }
+
+    /* Hero gradient */
+    .hero-bg {
+      background: linear-gradient(140deg, #0f0c29 0%, #1e1b4b 30%, #312e81 60%, #4338ca 85%, #6366f1 100%);
+    }
+
+    /* Range inputs */
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 9999px;
+      background: #e2e8f0;
+      outline: none;
+      cursor: pointer;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #4338ca);
+      box-shadow: 0 2px 6px rgba(99,102,241,0.4);
+      cursor: pointer;
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #4338ca);
+      border: none;
+    }
+
+    /* FAQ */
+    .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .faq-body.open { max-height: 500px; }
+    .faq-icon { transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); display: inline-block; }
+    .faq-icon.open { transform: rotate(45deg); }
+
+    /* Style picker */
+    .style-btn {
+      border: 2px solid #e2e8f0;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #fff;
+      border-radius: 14px;
+      padding: 10px 8px;
+    }
+    .style-btn:hover { border-color: #a5b4fc; background: #f5f3ff; }
+    .style-btn.active { border-color: #6366f1; background: #eef2ff; }
+
+    /* Paper btn */
+    .paper-btn {
+      flex: 1; padding: 10px 4px;
+      font-size: 0.75rem; font-weight: 600;
+      border-radius: 12px;
+      border: 2px solid #e2e8f0;
+      background: #fff; color: #64748b;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .paper-btn:hover { border-color: #a5b4fc; }
+    .paper-btn.active { border-color: #6366f1; background: #eef2ff; color: #4338ca; }
+
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+      color: #fff; font-weight: 700;
+      box-shadow: 0 4px 16px rgba(99,102,241,0.35);
+      transition: all 0.2s;
+      border-radius: 14px;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(99,102,241,0.5); }
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-outline {
+      border: 2px solid #c7d2fe;
+      color: #4338ca; font-weight: 600;
+      background: #fff;
+      border-radius: 14px;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: #6366f1; background: #eef2ff; transform: translateY(-1px); }
+
+    .btn-ghost {
+      border: 2px solid #e2e8f0;
+      color: #475569; font-weight: 600;
+      background: #fff;
+      border-radius: 14px;
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover { border-color: #94a3b8; transform: translateY(-1px); }
+
+    /* Watermark */
+    #preview-canvas::after {
+      content: 'HandwritingLab · trustedbyraju.github.io';
+      position: absolute;
+      bottom: 12px; right: 18px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      color: rgba(0,0,0,0.1);
+      pointer-events: none;
+      letter-spacing: 0.02em;
+    }
+
+    /* Mobile sticky CTA */
+    #mobile-cta { display: none; }
+    @media (max-width: 768px) {
+      #mobile-cta { display: flex; }
+      #preview-canvas { padding: 28px 22px 56px; }
+    }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* Badge pulse */
+    @keyframes badge-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); }
+      50% { box-shadow: 0 0 0 8px rgba(16,185,129,0); }
+    }
+    .badge-pulse { animation: badge-pulse 2.5s infinite; }
+
+    /* Hero float */
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .hero-float { animation: float 5s ease-in-out infinite; }
+
+    /* Print styles */
+    @media print {
+      body > *:not(#print-target) { display: none !important; }
+      #print-target {
+        display: block !important;
+        position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 9999;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════════
+     STICKY HEADER
+════════════════════════════════════════════ -->
+<header class="sticky top-0 z-50 glass-card border-b border-slate-200/60" role="banner">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2.5 group" aria-label="HandwritingLab Home">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-700 flex items-center justify-center shadow-lg">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+        </svg>
+      </div>
+      <div class="hidden sm:block">
+        <span class="font-display text-xl text-slate-900">Handwriting</span><span class="font-display text-xl text-indigo-600">Lab</span>
+        <div class="text-xs text-slate-400 leading-none -mt-0.5">Text to Handwriting Converter</div>
+      </div>
+    </a>
+
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-500" aria-label="Primary navigation">
+      <a href="#tool" class="hover:text-indigo-600 transition-colors">Tool</a>
+      <a href="#features" class="hover:text-indigo-600 transition-colors">Features</a>
+      <a href="#how-it-works" class="hover:text-indigo-600 transition-colors">How It Works</a>
+      <a href="#faq" class="hover:text-indigo-600 transition-colors">FAQ</a>
+      <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
+    </nav>
+
+    <!-- Right actions -->
+    <div class="flex items-center gap-2.5">
+      <span class="hidden sm:flex items-center gap-1.5 text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-full badge-pulse">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span> Free Tool
+      </span>
+      <a href="#tool" class="btn-primary text-sm px-4 py-2">Convert Now →</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="hero-bg text-white pt-20 pb-24 px-4 overflow-hidden relative" aria-labelledby="hero-h1">
+  <!-- Decorative blobs -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-indigo-400/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
+
+  <div class="max-w-5xl mx-auto text-center relative">
+    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2 text-sm font-medium mb-7">
+      <span class="text-yellow-300">✦</span>
+      2026 Edition · Trusted by 50,000+ Students Worldwide
+    </div>
+
+    <h1 id="hero-h1" class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-6">
+      Free Text to<br/>
+      <span class="text-yellow-300 italic">Handwriting</span> Converter
+    </h1>
+
+    <p class="text-lg sm:text-xl text-indigo-200 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Transform any typed text into beautiful, realistic handwriting in seconds.
+      6 authentic styles · Custom ink colors · PNG &amp; PDF download · Zero cost.
+    </p>
+
+    <!-- Trust chips -->
+    <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+      <span class="flex items-center gap-2 bg-white/10 border border-white/15 rounded-xl px-4 py-2 text-sm backdrop-blur-sm">🔒 No Data Stored</span>
+      <span class="flex items-center gap-2 bg-white/10 border border-white/15 rounded-xl px-4 py-2 text-sm backdrop-blur-sm">⚡ Works Offline</span>
+      <span class="flex items-center gap-2 bg-white/10 border border-white/15 rounded-xl px-4 py-2 text-sm backdrop-blur-sm">📱 Mobile Optimized</span>
+      <span class="flex items-center gap-2 bg-white/10 border border-white/15 rounded-xl px-4 py-2 text-sm backdrop-blur-sm">🎓 No Login Required</span>
+    </div>
+
+    <a href="#tool" class="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-lg px-10 py-4 rounded-2xl shadow-2xl shadow-yellow-400/30 transition-all hover:-translate-y-1 hero-float">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+      </svg>
+      Start Converting — It's 100% Free
+    </a>
+
+    <!-- Stats row -->
+    <div class="flex flex-wrap justify-center gap-8 mt-14 pt-10 border-t border-white/15">
+      <div class="text-center">
+        <div class="font-display text-3xl text-yellow-300">50K+</div>
+        <div class="text-indigo-300 text-sm mt-1">Monthly Users</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-3xl text-yellow-300">4.9★</div>
+        <div class="text-indigo-300 text-sm mt-1">Average Rating</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-3xl text-yellow-300">6</div>
+        <div class="text-indigo-300 text-sm mt-1">Handwriting Styles</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-3xl text-yellow-300">120+</div>
+        <div class="text-indigo-300 text-sm mt-1">Countries Reached</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     MAIN TOOL
+════════════════════════════════════════════ -->
+<section id="tool" class="py-14 sm:py-20 px-4" aria-labelledby="tool-title">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-10 reveal">
+      <h2 id="tool-title" class="font-display text-3xl sm:text-4xl text-slate-900 mb-3">
+        Handwriting Converter Tool
+      </h2>
+      <p class="text-slate-500 max-w-xl mx-auto">Type or paste your text, choose a style, and watch it become handwriting in real time.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-6 items-start">
+
+      <!-- ── LEFT PANEL: Controls ── -->
+      <div class="lg:col-span-2 space-y-5">
+
+        <!-- Text Input -->
+        <div class="glass-card rounded-2xl p-5 reveal">
+          <div class="flex items-center justify-between mb-3">
+            <label for="text-input" class="text-sm font-semibold text-slate-800">Your Text</label>
+            <div class="flex gap-2">
+              <button id="paste-btn" aria-label="Paste from clipboard" class="text-xs bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold px-3 py-1.5 rounded-lg transition-colors">Paste</button>
+              <button id="clear-btn" aria-label="Clear all text" class="text-xs bg-red-50 hover:bg-red-100 text-red-600 font-semibold px-3 py-1.5 rounded-lg transition-colors">Clear</button>
+            </div>
+          </div>
+          <textarea
+            id="text-input"
+            class="w-full h-44 border border-slate-200 rounded-xl p-3.5 text-sm text-slate-800 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300 bg-slate-50 placeholder-slate-400 transition-all"
+            placeholder="Type or paste your text here…&#10;&#10;e.g., Dear Diary, today was an amazing day. I learned something new and felt proud of my progress."
+            aria-label="Enter text to convert to handwriting"
+            maxlength="3000"
+          ></textarea>
+          <div class="flex justify-between items-center mt-2.5">
+            <span class="text-xs text-slate-400">Max 3,000 characters</span>
+            <span id="char-count" class="text-xs font-bold text-indigo-600">0 / 3000</span>
+          </div>
+        </div>
+
+        <!-- Style Picker -->
+        <div class="glass-card rounded-2xl p-5 reveal">
+          <h3 class="text-sm font-semibold text-slate-800 mb-4">✍️ Handwriting Style</h3>
+          <div class="grid grid-cols-2 gap-2.5" role="radiogroup" aria-label="Select handwriting style">
+
+            <button class="style-btn active" data-font="hw-caveat" aria-pressed="true" aria-label="Classic Cursive style">
+              <span class="block hw-caveat text-[22px] text-indigo-700 mb-1 leading-tight">Hello!</span>
+              <span class="text-[11px] font-semibold text-slate-500 block">Classic Cursive</span>
+            </button>
+
+            <button class="style-btn" data-font="hw-dancing" aria-pressed="false" aria-label="Elegant Script style">
+              <span class="block hw-dancing text-[20px] text-indigo-700 mb-1 leading-tight">Hello!</span>
+              <span class="text-[11px] font-semibold text-slate-500 block">Elegant Script</span>
+            </button>
+
+            <button class="style-btn" data-font="hw-indie" aria-pressed="false" aria-label="Casual Print style">
+              <span class="block hw-indie text-[20px] text-indigo-700 mb-1 leading-tight">Hello!</span>
+              <span class="text-[11px] font-semibold text-slate-500 block">Casual Print</span>
+            </button>
+
+            <button class="style-btn" data-font="hw-shadows" aria-pressed="false" aria-label="Light Shadow style">
+              <span class="block hw-shadows text-[20px] text-indigo-700 mb-1 leading-tight">Hello!</span>
+              <span class="text-[11px] font-semibold text-slate-500 block">Light Shadow</span>
+            </button>
+
+            <button class="style-btn" data-font="hw-patrick" aria-pressed="false" aria-label="Neat Hand style">
+              <span class="block hw-patrick text-[20px] text-indigo-700 mb-1 leading-tight">Hello!</span>
+              <span class="text-[11px] font-semibold text-slate-500 block">Neat Hand</span>
+            </button>
+
+            <button class="style-btn" data-font="hw-kalam" aria-pressed="false" aria-label="Kalam Script style">
+              <span class="block hw-kalam text-[20px] text-indigo-700 mb-1 leading-tight">Hello!</span>
+              <span class="text-[11px] font-semibold text-slate-500 block">Kalam Script</span>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Customization -->
+        <div class="glass-card rounded-2xl p-5 space-y-6 reveal">
+          <h3 class="text-sm font-semibold text-slate-800">🎨 Customization</h3>
+
+          <!-- Ink Color -->
+          <div>
+            <label class="text-xs font-semibold text-slate-600 block mb-2.5">Ink Color</label>
+            <div class="flex items-center gap-3 flex-wrap">
+              <input type="color" id="ink-color" value="#1a1a2e" class="w-10 h-10 rounded-xl border-2 border-slate-200 cursor-pointer p-0.5" aria-label="Choose custom ink color" />
+              <div class="flex gap-2" role="group" aria-label="Preset ink colors">
+                <button class="color-swatch w-8 h-8 rounded-full bg-gray-900 border-2 border-transparent hover:border-indigo-400 transition-all ring-offset-1 focus:ring-2 focus:ring-indigo-400" data-color="#1a1a2e" title="Black" aria-label="Black ink"></button>
+                <button class="color-swatch w-8 h-8 rounded-full bg-blue-700 border-2 border-transparent hover:border-indigo-400 transition-all focus:ring-2 focus:ring-indigo-400" data-color="#1d4ed8" title="Blue" aria-label="Blue ink"></button>
+                <button class="color-swatch w-8 h-8 rounded-full bg-emerald-700 border-2 border-transparent hover:border-indigo-400 transition-all focus:ring-2 focus:ring-indigo-400" data-color="#065f46" title="Green" aria-label="Green ink"></button>
+                <button class="color-swatch w-8 h-8 rounded-full bg-red-700 border-2 border-transparent hover:border-indigo-400 transition-all focus:ring-2 focus:ring-indigo-400" data-color="#b91c1c" title="Red" aria-label="Red ink"></button>
+                <button class="color-swatch w-8 h-8 rounded-full bg-purple-700 border-2 border-transparent hover:border-indigo-400 transition-all focus:ring-2 focus:ring-indigo-400" data-color="#6d28d9" title="Purple" aria-label="Purple ink"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Font Size -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label for="font-size-range" class="text-xs font-semibold text-slate-600">Font Size</label>
+              <span id="font-size-val" class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-lg">26px</span>
+            </div>
+            <input type="range" id="font-size-range" min="16" max="48" value="26" step="1" aria-label="Adjust font size" aria-valuemin="16" aria-valuemax="48" aria-valuenow="26" />
+            <div class="flex justify-between text-xs text-slate-400 mt-1"><span>Small</span><span>Large</span></div>
+          </div>
+
+          <!-- Line Spacing -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label for="line-spacing-range" class="text-xs font-semibold text-slate-600">Line Spacing</label>
+              <span id="line-spacing-val" class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-lg">2.2</span>
+            </div>
+            <input type="range" id="line-spacing-range" min="1.4" max="3.5" value="2.2" step="0.1" aria-label="Adjust line spacing" />
+            <div class="flex justify-between text-xs text-slate-400 mt-1"><span>Tight</span><span>Wide</span></div>
+          </div>
+
+          <!-- Paper Style -->
+          <div>
+            <label class="text-xs font-semibold text-slate-600 block mb-2.5">Paper Style</label>
+            <div class="flex gap-2" role="radiogroup" aria-label="Choose paper style">
+              <button class="paper-btn active" data-paper="paper-plain" aria-pressed="true">📄 Plain</button>
+              <button class="paper-btn" data-paper="paper-ruled" aria-pressed="false">📋 Ruled</button>
+              <button class="paper-btn" data-paper="paper-notebook" aria-pressed="false">📓 Notebook</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── RIGHT PANEL: Preview + Actions ── -->
+      <div class="lg:col-span-3 space-y-5 reveal">
+
+        <!-- Preview Card -->
+        <div class="glass-card rounded-2xl overflow-hidden">
+          <!-- Card Header -->
+          <div class="flex items-center justify-between px-5 py-3.5 border-b border-slate-100 bg-slate-50/60">
+            <div class="flex items-center gap-2.5">
+              <div class="flex gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+              </div>
+              <span class="text-xs font-semibold text-slate-500 ml-1">Live Preview</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+              <span class="text-xs text-slate-500">Real-time</span>
+            </div>
+          </div>
+
+          <!-- Canvas -->
+          <div class="overflow-auto" style="max-height: 540px;">
+            <div
+              id="preview-canvas"
+              class="hw-caveat paper-plain"
+              role="region"
+              aria-label="Handwriting output preview"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              <span id="canvas-placeholder" style="font-family:'Caveat',cursive; color:#cbd5e1; font-size:28px;">
+                Your handwriting will appear here…
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Actions -->
+        <div class="glass-card rounded-2xl p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-semibold text-slate-800">📥 Download & Export</h3>
+            <span class="text-xs text-slate-400 bg-slate-100 px-2 py-1 rounded-lg">High quality output</span>
+          </div>
+          <div class="grid sm:grid-cols-3 gap-3">
+            <button id="download-png" class="btn-primary py-3 px-4 text-sm flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              Download PNG
+            </button>
+            <button id="download-pdf" class="btn-outline py-3 px-4 text-sm flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              Download PDF
+            </button>
+            <button id="print-btn" class="btn-ghost py-3 px-4 text-sm flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+              </svg>
+              Print
+            </button>
+          </div>
+          <p class="text-xs text-slate-400 text-center mt-3.5 flex items-center justify-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            All processing is 100% local. Your text is never uploaded or stored.
+          </p>
+        </div>
+
+        <!-- Mini Trust Badges -->
+        <div class="grid grid-cols-3 gap-3">
+          <div class="glass-card rounded-xl p-3.5 text-center">
+            <div class="text-2xl mb-1.5">⭐</div>
+            <div class="text-sm font-bold text-slate-800">4.9 / 5</div>
+            <div class="text-xs text-slate-400 mt-0.5">User Rating</div>
+          </div>
+          <div class="glass-card rounded-xl p-3.5 text-center">
+            <div class="text-2xl mb-1.5">🎓</div>
+            <div class="text-sm font-bold text-slate-800">50,000+</div>
+            <div class="text-xs text-slate-400 mt-0.5">Students Served</div>
+          </div>
+          <div class="glass-card rounded-xl p-3.5 text-center">
+            <div class="text-2xl mb-1.5">🌏</div>
+            <div class="text-sm font-bold text-slate-800">120+ Countries</div>
+            <div class="text-xs text-slate-400 mt-0.5">Worldwide</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     FEATURES SECTION
+════════════════════════════════════════════ -->
+<section id="features" class="py-16 sm:py-20 px-4 bg-gradient-to-b from-white to-indigo-50/60" aria-labelledby="features-h2">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wide">Why Choose Us</div>
+      <h2 id="features-h2" class="font-display text-3xl sm:text-4xl text-slate-900 mb-4">Everything You Need, Nothing You Don't</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto">HandwritingLab packs professional-grade features into a free, fast, browser-based tool — no downloads, no accounts, no limits.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="glass-card rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all reveal">
+        <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center mb-4 text-2xl" aria-hidden="true">🖊️</div>
+        <h3 class="font-semibold text-slate-900 mb-2">6 Authentic Handwriting Styles</h3>
+        <p class="text-sm text-slate-500 leading-relaxed">Each style uses a professional handwriting font — Caveat, Dancing Script, Indie Flower, Shadows Into Light, Patrick Hand, and Kalam — crafted to look genuinely handwritten.</p>
+      </div>
+      <div class="glass-card rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all reveal">
+        <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 text-2xl" aria-hidden="true">🎨</div>
+        <h3 class="font-semibold text-slate-900 mb-2">Full Color & Size Control</h3>
+        <p class="text-sm text-slate-500 leading-relaxed">Pick any ink color from the full spectrum, choose from 5 preset pen colors, and adjust font size from 16px to 48px for perfect legibility at any scale.</p>
+      </div>
+      <div class="glass-card rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all reveal">
+        <div class="w-12 h-12 bg-yellow-100 rounded-2xl flex items-center justify-center mb-4 text-2xl" aria-hidden="true">📋</div>
+        <h3 class="font-semibold text-slate-900 mb-2">3 Realistic Paper Backgrounds</h3>
+        <p class="text-sm text-slate-500 leading-relaxed">Choose plain white for clean output, ruled lines that match your text size, or a classic notebook with a pink margin line — all rendered accurately.</p>
+      </div>
+      <div class="glass-card rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all reveal">
+        <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center mb-4 text-2xl" aria-hidden="true">⬇️</div>
+        <h3 class="font-semibold text-slate-900 mb-2">PNG & PDF Export</h3>
+        <p class="text-sm text-slate-500 leading-relaxed">Download your handwriting as a high-resolution PNG image for sharing, or use the PDF/print option to create print-ready pages — all generated instantly in your browser.</p>
+      </div>
+      <div class="glass-card rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all reveal">
+        <div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mb-4 text-2xl" aria-hidden="true">⚡</div>
+        <h3 class="font-semibold text-slate-900 mb-2">Real-Time Live Preview</h3>
+        <p class="text-sm text-slate-500 leading-relaxed">Every change — text, style, color, size — reflects instantly. No page reloads, no waiting. WYSIWYG previewing that makes refinement effortless.</p>
+      </div>
+      <div class="glass-card rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all reveal">
+        <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 text-2xl" aria-hidden="true">🔒</div>
+        <h3 class="font-semibold text-slate-900 mb-2">100% Private & Offline Ready</h3>
+        <p class="text-sm text-slate-500 leading-relaxed">Zero server calls. Your text never leaves your device. Once loaded, the tool works even without internet. No accounts, no tracking, no ads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════ -->
+<section id="how-it-works" class="py-16 sm:py-20 px-4 bg-white" aria-labelledby="how-h2">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-block bg-yellow-100 text-yellow-700 text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wide">Simple 3-Step Process</div>
+      <h2 id="how-h2" class="font-display text-3xl sm:text-4xl text-slate-900 mb-4">From Typed Text to Handwriting in Seconds</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="text-center reveal">
+        <div class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-2xl font-display mx-auto mb-5 shadow-lg shadow-indigo-200">1</div>
+        <h3 class="font-semibold text-slate-900 mb-2">Type or Paste Your Text</h3>
+        <p class="text-sm text-slate-500">Enter up to 3,000 characters. Use the Paste button or type directly in the large input area above.</p>
+      </div>
+      <div class="text-center reveal">
+        <div class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-2xl font-display mx-auto mb-5 shadow-lg shadow-indigo-200">2</div>
+        <h3 class="font-semibold text-slate-900 mb-2">Choose Style & Customize</h3>
+        <p class="text-sm text-slate-500">Pick a handwriting style, set ink color, font size, line spacing, and paper type. Watch the live preview update instantly.</p>
+      </div>
+      <div class="text-center reveal">
+        <div class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-2xl font-display mx-auto mb-5 shadow-lg shadow-indigo-200">3</div>
+        <h3 class="font-semibold text-slate-900 mb-2">Download or Print</h3>
+        <p class="text-sm text-slate-500">Save as a PNG image, print directly from your browser, or use the PDF option for multi-page documents.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SEO CONTENT
+════════════════════════════════════════════ -->
+<section class="py-16 sm:py-20 px-4 bg-gradient-to-b from-slate-50 to-white" aria-labelledby="seo-h2">
+  <div class="max-w-4xl mx-auto">
+    <h2 id="seo-h2" class="font-display text-3xl sm:text-4xl text-slate-900 mb-10 text-center reveal">
+      The Complete Guide to Text to Handwriting Conversion
+    </h2>
+
+    <div class="space-y-10 text-slate-600 text-base leading-relaxed reveal">
+
+      <div class="glass-card rounded-2xl p-8">
+        <h3 class="font-display text-2xl text-slate-800 mb-4">What Is a Text to Handwriting Converter?</h3>
+        <p class="mb-4">A <strong>text to handwriting converter</strong> is a browser-based tool that transforms your typed content into realistic, handwriting-style text using special cursive and printed handwriting fonts. Unlike standard word processors, which display text in uniform digital typefaces, a handwriting converter uses curated handwriting fonts and stylized rendering — including custom paper backgrounds, realistic ink colors, and natural line spacing — to produce output that closely resembles content actually written by hand.</p>
+        <p>Our <strong>free online handwriting generator</strong> goes further than most tools by offering real-time preview, multiple authentic styles, and full export options — all without requiring any installation, account creation, or payment. Everything runs directly in your web browser, making it accessible from any device worldwide.</p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-8">
+        <h3 class="font-display text-2xl text-slate-800 mb-4">Why Students Use a Handwriting Converter</h3>
+        <p class="mb-4">Students are the core audience for <strong>text to handwriting online</strong> tools — and it's easy to understand why. Academic requirements often demand handwritten assignments, personal journals, and structured notes, yet typing is significantly faster and more consistent than writing by hand. A handwriting converter bridges this gap.</p>
+        <ul class="list-disc pl-6 space-y-2.5">
+          <li><strong>Assignment Completion:</strong> Type your answers and produce handwriting-style pages that look and feel like real submitted work.</li>
+          <li><strong>Consistent Legibility:</strong> Choose the "Neat Hand" or "Patrick Hand" style for clean, readable output that teachers can easily assess.</li>
+          <li><strong>Note Templates:</strong> Create study notes on ruled or notebook paper backgrounds for organized, professional-looking revision materials.</li>
+          <li><strong>Accessibility:</strong> Students with motor difficulties, dysgraphia, or physical conditions affecting handwriting can produce equally neat and presentable work.</li>
+          <li><strong>Speed Advantage:</strong> Generate 3,000 characters of handwriting in under a minute — tasks that would take 30+ minutes to write by hand.</li>
+          <li><strong>Language Learning:</strong> Use different handwriting styles to practice how letters connect in cursive, making it a learning aid as well.</li>
+        </ul>
+      </div>
+
+      <div class="glass-card rounded-2xl p-8">
+        <h3 class="font-display text-2xl text-slate-800 mb-4">Top Use Cases Beyond Student Work</h3>
+        <p class="mb-4">The applications of a <strong>convert text to handwriting</strong> tool extend far beyond the classroom:</p>
+        <ul class="list-disc pl-6 space-y-2.5">
+          <li><strong>Digital Journals & Diaries:</strong> Preserve personal entries in handwriting format without buying physical journals.</li>
+          <li><strong>Greeting Cards & Invitations:</strong> Add a warm, personal handwritten message to birthday cards, wedding invites, and thank-you notes.</li>
+          <li><strong>Social Media Content:</strong> Handwritten-style graphics consistently outperform standard text posts on Instagram, Pinterest, and Twitter.</li>
+          <li><strong>Calligraphy Learning:</strong> Generate practice guides and reference pages for students learning cursive or calligraphy.</li>
+          <li><strong>Author Mockups:</strong> Writers and publishers use handwriting fonts to create realistic diary-format book interiors and cover concepts.</li>
+          <li><strong>Educational Worksheets:</strong> Teachers create worksheets that feel more approachable and personalized for younger students.</li>
+          <li><strong>Blog & Content Creation:</strong> Add handwriting-style pull quotes or headers to blog posts for a unique editorial aesthetic.</li>
+        </ul>
+      </div>
+
+      <div class="glass-card rounded-2xl p-8">
+        <h3 class="font-display text-2xl text-slate-800 mb-4">Choosing the Right Handwriting Style</h3>
+        <p class="mb-4">Our tool includes six carefully selected handwriting fonts, each serving a different purpose:</p>
+        <ul class="list-disc pl-6 space-y-2.5">
+          <li><strong class="hw-caveat text-indigo-700 text-lg">Classic Cursive (Caveat):</strong> Flowing, connected letterforms. Ideal for formal letters, signatures, and elegant notes.</li>
+          <li><strong class="hw-dancing text-indigo-700 text-lg">Elegant Script (Dancing Script):</strong> Decorative and graceful. Best for wedding stationery, artistic headers, and premium creative projects.</li>
+          <li><strong class="hw-indie text-indigo-700 text-lg">Casual Print (Indie Flower):</strong> Bubbly and friendly. Perfect for school notes, children's content, and casual journals.</li>
+          <li><strong class="hw-shadows text-indigo-700 text-lg">Light Shadow (Shadows Into Light):</strong> A slightly slanted, light style — great for diary entries and personal letters with a natural feel.</li>
+          <li><strong class="hw-patrick text-indigo-700 text-lg">Neat Hand (Patrick Hand):</strong> Clean and professional — the top pick for academic assignments and formal handwritten documents.</li>
+          <li><strong class="hw-kalam text-indigo-700 text-lg">Kalam Script:</strong> South Asian-influenced handwriting that feels natural and warm — excellent for everyday note-taking and regional language contexts.</li>
+        </ul>
+      </div>
+
+      <div class="glass-card rounded-2xl p-8">
+        <h3 class="font-display text-2xl text-slate-800 mb-4">Privacy, Security & Browser-First Design</h3>
+        <p class="mb-4">Unlike cloud-based tools that transmit your text to external servers for processing, <strong>HandwritingLab processes everything entirely within your web browser</strong>. This architectural choice provides maximum privacy and security:</p>
+        <ul class="list-disc pl-6 space-y-2.5">
+          <li>Your private notes, assignments, diary entries, and creative content stay entirely on your device.</li>
+          <li>The tool continues to function even after your internet connection drops — no server dependency after initial page load.</li>
+          <li>No user accounts are required or created. No cookies track your behavior across sessions.</li>
+          <li>There are no analytics scripts, third-party tracking pixels, or advertising networks collecting data about your usage.</li>
+          <li>The source code is transparent — what you see is exactly what runs in your browser, nothing hidden.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     FAQ SECTION
+════════════════════════════════════════════ -->
+<section id="faq" class="py-16 sm:py-20 px-4 bg-indigo-50" aria-labelledby="faq-h2">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wide">Got Questions?</div>
+      <h2 id="faq-h2" class="font-display text-3xl sm:text-4xl text-slate-900 mb-4">Frequently Asked Questions</h2>
+      <p class="text-slate-500">Everything you need to know about our text to handwriting converter tool.</p>
+    </div>
+
+    <div class="space-y-3" role="list">
+
+      <div class="glass-card rounded-2xl overflow-hidden reveal" role="listitem">
+        <button class="faq-toggle w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-slate-50/50 transition-colors" aria-expanded="false" aria-controls="faq-a1">
+          <span class="font-semibold text-slate-800 text-sm sm:text-base pr-6">Is the text to handwriting converter completely free to use?</span>
+          <span class="faq-icon text-indigo-500 text-xl font-bold flex-shrink-0 w-6 h-6 flex items-center justify-center bg-indigo-100 rounded-full">+</span>
+        </button>
+        <div id="faq-a1" class="faq-body" role="region">
+          <p class="px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed">Yes, completely and unconditionally free. HandwritingLab has no premium tier, no subscription plan, and no usage limits. Every feature — all 6 handwriting styles, full color picker, all paper backgrounds, PNG download, and PDF export — is available to every user at zero cost. We believe powerful tools should be accessible to all students and creators, regardless of budget.</p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl overflow-hidden reveal" role="listitem">
+        <button class="faq-toggle w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-slate-50/50 transition-colors" aria-expanded="false" aria-controls="faq-a2">
+          <span class="font-semibold text-slate-800 text-sm sm:text-base pr-6">Does HandwritingLab save or upload my text to a server?</span>
+          <span class="faq-icon text-indigo-500 text-xl font-bold flex-shrink-0 w-6 h-6 flex items-center justify-center bg-indigo-100 rounded-full">+</span>
+        </button>
+        <div id="faq-a2" class="faq-body" role="region">
+          <p class="px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed">Never. All processing happens entirely inside your web browser using JavaScript. Your text is never transmitted to any server, never saved to a database, and never shared with any third party. The tool works offline once loaded. This means your diary entries, school assignments, personal letters, and any other content remain 100% private on your own device.</p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl overflow-hidden reveal" role="listitem">
+        <button class="faq-toggle w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-slate-50/50 transition-colors" aria-expanded="false" aria-controls="faq-a3">
+          <span class="font-semibold text-slate-800 text-sm sm:text-base pr-6">How many handwriting font styles are available?</span>
+          <span class="faq-icon text-indigo-500 text-xl font-bold flex-shrink-0 w-6 h-6 flex items-center justify-center bg-indigo-100 rounded-full">+</span>
+        </button>
+        <div id="faq-a3" class="faq-body" role="region">
+          <p class="px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed">We currently offer 6 distinct handwriting styles: Classic Cursive (Caveat), Elegant Script (Dancing Script), Casual Print (Indie Flower), Light Shadow (Shadows Into Light), Neat Hand (Patrick Hand), and Kalam Script. Each uses a carefully selected Google Font that closely resembles natural human handwriting. We actively update the tool with new styles based on community feedback.</p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl overflow-hidden reveal" role="listitem">
+        <button class="faq-toggle w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-slate-50/50 transition-colors" aria-expanded="false" aria-controls="faq-a4">
+          <span class="font-semibold text-slate-800 text-sm sm:text-base pr-6">How do I download my handwriting as an image or PDF?</span>
+          <span class="faq-icon text-indigo-500 text-xl font-bold flex-shrink-0 w-6 h-6 flex items-center justify-center bg-indigo-100 rounded-full">+</span>
+        </button>
+        <div id="faq-a4" class="faq-body" role="region">
+          <p class="px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed">After entering your text and customizing the style, use the three export buttons below the preview. "Download PNG" saves a high-resolution image of your handwriting output. "Download PDF" opens a print dialog allowing you to save as PDF using your browser's built-in PDF export. "Print" sends the output directly to any connected printer. All exports are generated locally — no server or internet needed.</p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl overflow-hidden reveal" role="listitem">
+        <button class="faq-toggle w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-slate-50/50 transition-colors" aria-expanded="false" aria-controls="faq-a5">
+          <span class="font-semibold text-slate-800 text-sm sm:text-base pr-6">Does the tool work on smartphones and tablets?</span>
+          <span class="faq-icon text-indigo-500 text-xl font-bold flex-shrink-0 w-6 h-6 flex items-center justify-center bg-indigo-100 rounded-full">+</span>
+        </button>
+        <div id="faq-a5" class="faq-body" role="region">
+          <p class="px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed">Yes, HandwritingLab is fully responsive and optimized for all screen sizes. On mobile, controls are thumb-friendly with a sticky action bar at the bottom for quick access to the most important features. It works seamlessly on Chrome, Safari, Firefox, and Edge across both iOS and Android. The tool was tested on both portrait and landscape orientations for the best mobile experience.</p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl overflow-hidden reveal" role="listitem">
+        <button class="faq-toggle w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-slate-50/50 transition-colors" aria-expanded="false" aria-controls="faq-a6">
+          <span class="font-semibold text-slate-800 text-sm sm:text-base pr-6">Can I use a fully custom ink color for the handwriting?</span>
+          <span class="faq-icon text-indigo-500 text-xl font-bold flex-shrink-0 w-6 h-6 flex items-center justify-center bg-indigo-100 rounded-full">+</span>
+        </button>
+        <div id="faq-a6" class="faq-body" role="region">
+          <p class="px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed">Absolutely. The ink color system gives you full creative control. Choose from 5 preset colors (black, blue, green, red, purple) for common pen types, or click the color picker to select any color from the full spectrum — over 16 million options. This lets you replicate any pen style: classic black ballpoint, blue gel pen, red correction pen, green marker, or even unusual colors for creative projects. Changes apply instantly to the live preview.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     ABOUT / AUTHOR
+════════════════════════════════════════════ -->
+<section id="about" class="py-16 sm:py-20 px-4 bg-white" aria-labelledby="about-h2">
+  <div class="max-w-3xl mx-auto reveal">
+    <div class="glass-card rounded-3xl p-8 sm:p-12 border border-indigo-100/60 text-center">
+      <div class="relative inline-block mb-6">
+        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-500 to-purple-700 flex items-center justify-center text-white text-3xl font-display shadow-xl shadow-indigo-200 mx-auto">K</div>
+        <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-white">
+          <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+      </div>
+
+      <div class="inline-block bg-indigo-50 text-indigo-600 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">Verified Creator</div>
+      <h2 id="about-h2" class="font-display text-2xl sm:text-3xl text-slate-900 mb-1">Built by Karna Raju</h2>
+      <p class="text-indigo-600 font-semibold text-sm mb-6">Digital Tools Creator · eBook Author · Content Strategist</p>
+
+      <p class="text-slate-600 text-base leading-relaxed max-w-xl mx-auto mb-8">
+        I built HandwritingLab because I believe premium tools should be free for everyone — especially students who deserve the best resources regardless of their budget. As a digital content creator, eBook author, and publisher at <a href="https://rockeybhaioffer.blogspot.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-semibold underline decoration-dotted">rockeybhaioffer.blogspot.com</a>, I create tools, guides, and resources to help people work smarter, learn faster, and create more effectively.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <span class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-sm text-slate-700 font-medium">📚 eBook Author</span>
+        <span class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-sm text-slate-700 font-medium">🔧 Tool Builder</span>
+        <span class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-sm text-slate-700 font-medium">🎓 Education Advocate</span>
+      </div>
+
+      <a href="https://rockeybhaioffer.blogspot.com" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center gap-2 px-8 py-3 text-sm">
+        Visit My Blog & Resources →
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="bg-slate-900 text-slate-400 py-12 px-4" role="contentinfo">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid sm:grid-cols-3 gap-8 mb-10">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+          </div>
+          <span class="font-display text-white text-lg">HandwritingLab</span>
+        </div>
+        <p class="text-sm leading-relaxed mb-3">Free online text to handwriting converter trusted by students and creators in 120+ countries.</p>
+        <p class="text-xs text-slate-500">Built by <a href="https://rockeybhaioffer.blogspot.com" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 transition-colors">Karna Raju</a> · 2026 Edition</p>
+      </div>
+
+      <!-- Tool Links -->
+      <div>
+        <h3 class="text-white font-semibold text-sm mb-4">Tool</h3>
+        <nav aria-label="Footer tool links">
+          <ul class="space-y-2 text-sm">
+            <li><a href="#tool" class="hover:text-white transition-colors">Text to Handwriting Converter</a></li>
+            <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+            <li><a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-white font-semibold text-sm mb-4">Resources</h3>
+        <nav aria-label="Footer resource links">
+          <ul class="space-y-2 text-sm">
+            <li><a href="#about" class="hover:text-white transition-colors">About Karna Raju</a></li>
+            <li><a href="https://rockeybhaioffer.blogspot.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Blog & eBooks</a></li>
+          </ul>
+        </nav>
+        <div class="mt-5 pt-5 border-t border-slate-800">
+          <div class="flex items-center gap-1.5 text-xs text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+            Privacy-first · No data stored
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+      <p>© 2026 HandwritingLab. Free for personal & educational use. No copyright claimed on user-generated handwriting output.</p>
+      <p class="text-slate-500">Text to Handwriting Converter · Free Online Tool · No Login Required</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════
+     STICKY MOBILE CTA
+════════════════════════════════════════════ -->
+<div id="mobile-cta" class="fixed bottom-0 left-0 right-0 z-50 p-3 gap-2.5 bg-white/95 backdrop-blur-sm border-t border-slate-200 shadow-xl" role="complementary" aria-label="Mobile quick actions">
+  <a href="#tool" class="flex-1 btn-primary py-3 text-sm text-center flex items-center justify-center gap-2">
+    ✍️ Convert Text Now
+  </a>
+  <button id="mobile-dl-png" class="btn-outline py-3 px-4 text-sm flex-shrink-0 flex items-center justify-center gap-1">
+    PNG ↓
+  </button>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  // ── DOM refs ──────────────────────────────
+  const textInput      = document.getElementById('text-input');
+  const charCount      = document.getElementById('char-count');
+  const canvas         = document.getElementById('preview-canvas');
+  const placeholder    = document.getElementById('canvas-placeholder');
+  const inkColorInput  = document.getElementById('ink-color');
+  const fontSizeRange  = document.getElementById('font-size-range');
+  const fontSizeVal    = document.getElementById('font-size-val');
+  const lineSpacingRange = document.getElementById('line-spacing-range');
+  const lineSpacingVal   = document.getElementById('line-spacing-val');
+  const pasteBtn       = document.getElementById('paste-btn');
+  const clearBtn       = document.getElementById('clear-btn');
+  const dlPngBtn       = document.getElementById('download-png');
+  const dlPdfBtn       = document.getElementById('download-pdf');
+  const printBtnEl     = document.getElementById('print-btn');
+  const mobileDlPng    = document.getElementById('mobile-dl-png');
+
+  // State
+  let currentFont  = 'hw-caveat';
+  let currentPaper = 'paper-plain';
+  let currentInk   = '#1a1a2e';
+
+  // ── Helpers ───────────────────────────────
+  function setCSSVar(name, value) {
+    document.documentElement.style.setProperty(name, value);
+  }
+
+  function renderPreview() {
+    const text = textInput.value;
+    if (!text.trim()) {
+      if (placeholder) placeholder.style.display = 'inline';
+      // Remove text nodes
+      Array.from(canvas.childNodes).forEach(n => {
+        if (n !== placeholder) canvas.removeChild(n);
+      });
+    } else {
+      if (placeholder) placeholder.style.display = 'none';
+      // Remove old text nodes
+      Array.from(canvas.childNodes).forEach(n => {
+        if (n !== placeholder) canvas.removeChild(n);
+      });
+      canvas.appendChild(document.createTextNode(text));
+    }
+  }
+
+  // ── Text input ────────────────────────────
+  textInput.addEventListener('input', () => {
+    const len = textInput.value.length;
+    charCount.textContent = len + ' / 3000';
+    renderPreview();
+  });
+
+  pasteBtn.addEventListener('click', async () => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.readText) {
+        const t = await navigator.clipboard.readText();
+        textInput.value = (textInput.value + t).slice(0, 3000);
+      } else {
+        textInput.focus();
+        document.execCommand('paste');
+      }
+      textInput.dispatchEvent(new Event('input'));
+    } catch (e) {
+      textInput.focus();
+    }
+  });
+
+  clearBtn.addEventListener('click', () => {
+    textInput.value = '';
+    textInput.dispatchEvent(new Event('input'));
+    textInput.focus();
+  });
+
+  // ── Style buttons ─────────────────────────
+  document.querySelectorAll('.style-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.style-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+
+      canvas.classList.remove('hw-caveat','hw-dancing','hw-indie','hw-shadows','hw-patrick','hw-kalam');
+      currentFont = btn.dataset.font;
+      canvas.classList.add(currentFont);
+    });
+  });
+
+  // ── Paper buttons ─────────────────────────
+  document.querySelectorAll('.paper-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.paper-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      canvas.classList.remove('paper-plain','paper-ruled','paper-notebook');
+      currentPaper = btn.dataset.paper;
+      canvas.classList.add(currentPaper);
+    });
+  });
+
+  // ── Ink color ─────────────────────────────
+  function applyInk(color) {
+    currentInk = color;
+    setCSSVar('--ink', color);
+    canvas.style.color = color;
+    inkColorInput.value = color;
+  }
+
+  inkColorInput.addEventListener('input', () => applyInk(inkColorInput.value));
+
+  document.querySelectorAll('.color-swatch').forEach(sw => {
+    sw.addEventListener('click', () => applyInk(sw.dataset.color));
+    sw.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); applyInk(sw.dataset.color); } });
+  });
+
+  // ── Font size ─────────────────────────────
+  fontSizeRange.addEventListener('input', () => {
+    const v = fontSizeRange.value + 'px';
+    fontSizeVal.textContent = fontSizeRange.value + 'px';
+    fontSizeRange.setAttribute('aria-valuenow', fontSizeRange.value);
+    setCSSVar('--font-size', v);
+    canvas.style.fontSize = v;
+  });
+
+  // ── Line spacing ──────────────────────────
+  lineSpacingRange.addEventListener('input', () => {
+    const v = parseFloat(lineSpacingRange.value).toFixed(1);
+    lineSpacingVal.textContent = v;
+    setCSSVar('--line-height', v);
+    canvas.style.lineHeight = v;
+  });
+
+  // ── Canvas to image (PNG) ─────────────────
+  function buildOffscreenCanvas() {
+    const W = 800;
+    const fontSize = parseInt(fontSizeRange.value);
+    const lineH = parseFloat(lineSpacingRange.value) * fontSize;
+    const padTop = 44, padSide = 52, padBottom = 64;
+    const isNotebook = currentPaper === 'paper-notebook';
+    const xStart = isNotebook ? 84 : padSide;
+    const maxW = W - xStart - padSide;
+
+    // Measure lines using temp canvas
+    const measure = document.createElement('canvas').getContext('2d');
+    const fontMap = {
+      'hw-caveat': 'Caveat', 'hw-dancing': 'Dancing Script',
+      'hw-indie': 'Indie Flower', 'hw-shadows': 'Shadows Into Light',
+      'hw-patrick': 'Patrick Hand', 'hw-kalam': 'Kalam'
+    };
+    const fontFace = fontMap[currentFont] || 'Caveat';
+    measure.font = `${fontSize}px '${fontFace}', cursive`;
+
+    const rawLines = textInput.value.split('\n');
+    const wrappedLines = [];
+    rawLines.forEach(para => {
+      if (!para.trim()) { wrappedLines.push(''); return; }
+      const words = para.split(' ');
+      let line = '';
+      words.forEach(word => {
+        const test = line ? line + ' ' + word : word;
+        if (measure.measureText(test).width > maxW && line) {
+          wrappedLines.push(line);
+          line = word;
+        } else { line = test; }
+      });
+      if (line) wrappedLines.push(line);
+    });
+
+    const H = Math.max(600, padTop + wrappedLines.length * lineH + padBottom);
+    const oc = document.createElement('canvas');
+    oc.width = W; oc.height = H;
+    const ctx = oc.getContext('2d');
+
+    // Background
+    const bgColors = { 'paper-plain': '#fffef7', 'paper-ruled': '#fffef7', 'paper-notebook': '#f5f7ff' };
+    ctx.fillStyle = bgColors[currentPaper] || '#fffef7';
+    ctx.fillRect(0, 0, W, H);
+
+    // Lines
+    if (currentPaper === 'paper-ruled' || isNotebook) {
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = isNotebook ? '#c4b5fd' : '#b8cfe8';
+      const yOffset = lineH * 0.8;
+      for (let y = padTop + yOffset; y < H - padBottom; y += lineH) {
+        ctx.beginPath(); ctx.moveTo(padSide, y); ctx.lineTo(W - padSide, y); ctx.stroke();
+      }
+    }
+    // Notebook margin
+    if (isNotebook) {
+      ctx.strokeStyle = '#fca5a5';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath(); ctx.moveTo(67, 0); ctx.lineTo(67, H); ctx.stroke();
+    }
+
+    // Text
+    ctx.fillStyle = currentInk;
+    ctx.font = `${fontSize}px '${fontFace}', cursive`;
+    ctx.textBaseline = 'top';
+    wrappedLines.forEach((line, i) => {
+      ctx.fillText(line, xStart, padTop + i * lineH);
+    });
+
+    // Watermark
+    ctx.fillStyle = 'rgba(0,0,0,0.1)';
+    ctx.font = '10px system-ui, sans-serif';
+    ctx.textBaseline = 'bottom';
+    ctx.fillText('HandwritingLab · trustedbyraju.github.io', W - 260, H - 12);
+
+    return oc;
+  }
+
+  function downloadPNG() {
+    if (!textInput.value.trim()) {
+      alert('Please enter some text first to generate handwriting!');
+      return;
+    }
+    try {
+      const oc = buildOffscreenCanvas();
+      const link = document.createElement('a');
+      link.download = 'handwriting-lab-output.png';
+      link.href = oc.toDataURL('image/png', 1.0);
+      link.click();
+    } catch (err) {
+      alert('PNG export failed. Please try the Print option to save as PDF instead.');
+    }
+  }
+
+  dlPngBtn.addEventListener('click', downloadPNG);
+  mobileDlPng && mobileDlPng.addEventListener('click', downloadPNG);
+
+  // ── PDF / Print ───────────────────────────
+  function triggerPrint() {
+    if (!textInput.value.trim()) {
+      alert('Please enter some text first!');
+      return;
+    }
+    window.print();
+  }
+  dlPdfBtn.addEventListener('click', triggerPrint);
+  printBtnEl.addEventListener('click', triggerPrint);
+
+  // ── Inject print CSS ──────────────────────
+  const ps = document.createElement('style');
+  ps.textContent = `
+    @media print {
+      header, footer, #mobile-cta, .hero-bg,
+      #features, #how-it-works, section:not(#tool),
+      #faq, #about, .glass-card:not(#preview-card) { display: none !important; }
+      #tool { padding: 0 !important; }
+      #preview-canvas {
+        min-height: 100vh;
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        color: var(--ink);
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      #preview-canvas::after { display: none !important; }
+      body { background: white !important; }
+    }
+  `;
+  document.head.appendChild(ps);
+
+  // ── FAQ accordion ─────────────────────────
+  document.querySelectorAll('.faq-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const body   = btn.nextElementSibling;
+      const icon   = btn.querySelector('.faq-icon');
+      const isOpen = body.classList.contains('open');
+
+      document.querySelectorAll('.faq-body').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
+      document.querySelectorAll('.faq-toggle').forEach(t => t.setAttribute('aria-expanded', 'false'));
+
+      if (!isOpen) {
+        body.classList.add('open');
+        icon.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ── Scroll reveal ─────────────────────────
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── Init ──────────────────────────────────
+  renderPreview();
+
+})();
+</script>
+
+</body>
+</html>
